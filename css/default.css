@@ -1,0 +1,131 @@
+@charset "UTF-8";
+
+/* root-css-var */
+:root {
+	--color-light: #9b9b9b;
+	--color-dark: #262626;
+	--color-navyblue: #3C096C; /* #415D43;*/ /*#03045E */ /* #0B525B */
+	--color-commandblue: #0077B6;
+	--color-ceruleancrayola: #00B4D8;
+	--color-skybluecrayola: #90E0EF;
+	--color-white: #FEFCFB;
+	--color-red: #D00000;
+	--color-silver: #E6E6E6;
+
+	--bg-header: var(--color-navyblue);
+	--bg-header-right: var(--color-white);
+	--bg-header-left: var(--color-navyblue);
+	--bg-button: var(--color-navyblue);
+	--bg-border: var(--color-navyblue);
+
+	--bg-nav: var(--color-white);
+	--bg-nav-top: var(--color-white);
+	--bg-nav-bottom: var(--color-navyblue);
+
+
+	--zindex-nav: 998;
+	--zindex-nav-trigger: 999;
+	--zindex-nav-top: 1000;
+	--zindex-header: 1003;
+	--zindex-overlay: 1001;
+	--zindex-search: 1002;
+
+	--base-font-px: 16px;
+	--base-font-rem: 1.6rem;
+
+
+
+  	--primary-color-h: 156;
+  	--primary-color-s: 50%;
+  	--primary-color-l: 50%;
+  	--primary-color: hsl(var(—primary-color-h), var(--primary-color-s), var(--primary-color-l));
+  
+  	/* lighten */
+  	--primary-color--light: hsl(var(--primary-color-h), var(--primary-color-s), calc(var(--primary-color-l) + 15%));
+
+  	/* darken */ 
+  	--primary-color--dark: hsl(var(--primary-color-h), var(--primary-color-s), calc(var(--primary-color-l) - 15%));
+  
+  	/* complement */
+  	--primary-color--complement: hsl(calc(var(--primary-color-h) + 180), var(--primary-color-s), var(--primary-color-l));
+
+  	/* triad */ 
+  	--primary-color--triada-1: hsl(calc(var(--primary-color-h) + 120), var(--primary-color-s), var(--primary-color-l));
+  	--primary-color--triada-2: hsl(calc(var(--primary-color-h) + 240), var(--primary-color-s), var(--primary-color-l));
+
+  	/* analogous */
+  	--degree: 15;
+  	--primary-color--analogous-1: hsl( 
+	    calc(var(--primary-color-h) + var(--degree)), 
+	    var(--primary-color-s), 
+	    var(--primary-color-l)
+  	);
+
+  	--primary-color--analogous-2: hsl( 
+	    calc(var(--primary-color-h) - var(--degree)), 
+	    var(--primary-color-s), 
+	    var(--primary-color-l)
+  	);	
+}
+
+
+*, 
+*::before, 
+*::after {
+  	-webkit-box-sizing: inherit;
+  	-moz-box-sizing: inherit;
+  	box-sizing: inherit
+}
+/******* end *******/
+
+
+html {
+	font-size: 62.5%;
+	font-family: sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+  	-webkit-box-sizing: border-box;
+  	-moz-box-sizing: border-box;
+  	box-sizing: border-box  
+}
+/******* end *******/
+
+
+body {
+    margin: 0;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: var(--base-font-px);
+    font-size: var(--base-font-rem);
+    font-weight: 400;
+    line-height: 1.618;
+    color: var(--color-black);
+    text-align: left;
+    background-color: var(--color-white);
+}
+/******* end *******/
+
+body.search-overflow-hidden {
+	overflow: hidden !important;
+}
+
+body.nav-overflow-hidden {
+	overflow-y: hidden;
+}
+
+@media only screen and (min-width: 992px) {
+	body.nav-overflow-hidden {
+		overflow-y: auto !important;
+	}	
+}
+
+
+
+/* common */
+::placeholder {
+  	color: var(--color-black);
+  	opacity: 1;
+}
+:-ms-input-placeholder { color: var(--color-black)}
+::-ms-input-placeholder { color: var(--color-black)}
+/******* end *******/

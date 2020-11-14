@@ -1,0 +1,205 @@
+@charset "UTF-8";
+
+
+
+/* figure-carousel */
+.gl__figure {
+	position: relative;
+	margin: 0;
+}
+.gl__figure--carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    overflow: hidden;	
+	margin-bottom: 15px;
+}
+.gl__figure--carousel .carousel-link {
+	position: relative;
+	display: block;
+	width: 100%;
+	text-decoration: none;
+}
+
+.gl__figure--carousel .item-desc {
+	padding: 15px;
+}
+
+.gl__figure--carousel .item-desc h1 {
+	font-size: 32px;
+	font-size: 3.2rem;
+    line-height: 1.316;
+    color: var(--color-dark);
+    font-family: 'Merriweather', serif;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 1rem;	
+}
+
+.gl__figure--carousel .item-desc p {
+	font-size: 18px;
+	line-height: 1.316;
+	color: var(--color-light);
+}
+
+/* owl settings carousel */
+.gl__figure--carousel .owl-item img {
+	width: 100%;
+	height: 300px;
+	object-fit: cover;
+}
+
+@media only screen and (min-width: 768px) {
+	.gl__figure--carousel .owl-item img {
+		height: 420px;
+	}
+}
+
+.gl__figure--carousel .owl-nav {
+	margin: 0 !important;
+}
+
+.gl__figure--carousel .owl-prev,
+.gl__figure--carousel .owl-next {
+	position: absolute;
+	top: 200px;
+	margin: 0 !important;
+	width: 40px;
+	height: 60px;
+	outline: 0;
+}
+
+.owl-carousel .owl-nav button.owl-prev, 
+.owl-carousel .owl-nav button.owl-next {
+	background-color: var(--color-navyblue);
+}
+
+.gl__figure--carousel .owl-prev span,
+.gl__figure--carousel .owl-next span {
+	display: block;
+}
+
+.gl__figure--carousel .owl-prev span > i,
+.gl__figure--carousel .owl-next span > i {
+	font-size: 33px;
+	font-size: 3.3rem;
+	vertical-align: middle;
+    line-height: 1.218;
+    color: var(--color-white);
+}
+
+.gl__figure--carousel .owl-prev {
+	left: 10px;
+}
+
+.gl__figure--carousel .owl-next {
+	right: 10px;
+}
+
+.gl__figure--carousel .owl-nav [class*='owl-'] {
+	border-radius: 3px;
+}
+
+.gl__figure--carousel .owl-nav [class*='owl-']:hover {
+	background-color: var(--color-red)
+}
+/* end */
+
+
+
+
+.fonts {
+	font-family: 'Merriweather', serif;
+	font-family: 'Montserrat', sans-serif;
+	font-family: 'Open Sans', sans-serif;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-family: 'Oswald', sans-serif;
+	font-family: 'Playfair Display', serif;
+	font-family: 'Raleway', sans-serif;
+	font-family: 'Roboto Condensed', sans-serif;	
+}
+
+
+
+
+@media only screen and (min-width: 576px) {}
+@media only screen and (min-width: 768px) {}
+@media only screen and (min-width: 992px) {}
+@media only screen and (min-width: 1200px) {}
+@media only screen and (max-width: 575.98px) {}
+@media only screen and (max-width: 767.98px) {}
+@media only screen and (max-width: 991.98px) {}
+@media only screen and (max-width: 1199.98px) {}
+
+
+
+.banner {
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.banner-top {
+	width: 100%;
+	max-width: 728px;
+	min-height: 90px;
+}
+@media only screen and (min-width: 992px) {
+	.banner-top {
+		margin-left: 160px;
+	}
+}
+
+
+
+.figure__banner {
+	position: relative;
+	width: 100%;
+	min-height: 90px;
+	background-color: red;
+	padding: 10px 20px;
+	overflow: hidden;
+	border-radius: 5px;
+}
+
+.banner-link {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.figure__banner .banner-title {
+	margin: 0;
+	font-size: 24px;
+	font-size: 2.4rem;
+	color: var(--color-white);
+} 
+
+.figure__banner .banner-subtitle {
+	margin: 0;
+	color: var(--color-white);
+}
+
+
+.figure__banner--purple {
+	background: rgb(142,45,226);
+	background: linear-gradient(180deg, rgba(142,45,226,1) 0%, rgba(74,0,224,1) 100%);
+}
+
+.figure__banner--purple:hover {
+	background: rgb(142,45,226);
+	background: linear-gradient(0deg, rgba(142,45,226,1) 0%, rgba(74,0,224,1) 100%);	
+}
+
+.figure__banner .circle {
+
+}
