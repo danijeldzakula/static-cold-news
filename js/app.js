@@ -3,7 +3,7 @@ $(function() {
 	$(window).scroll(function() {
 		var scrollTop = $(window).scrollTop();
 
-	    if (scrollTop >= 62) {
+	    if (scrollTop >= 72) {
 	        $('#sticky-nav').addClass('gl__nav--isFixed');
 	    } else {
 	        $('#sticky-nav').removeClass('gl__nav--isFixed');
@@ -37,7 +37,7 @@ $(function() {
 	/* carousel */
 	$('.gl__figure').owlCarousel({
 	    loop: true,
-	    margin: 0,
+	    margin: 10,
 	    dots: false,
 	    nav: true,
 	    items: 1,
