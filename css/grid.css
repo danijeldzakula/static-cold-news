@@ -60,3 +60,19 @@
 	padding-left: 15px;
 }
 /******* end *******/
+
+/* row */
+.row {
+	position: relative;
+	margin-right: -15px;
+	margin-left: -15px;
+}
+
+.row::before, 
+.row::after {
+    content: "";
+    display: table
+}
+.row::after { clear: both }
+.row { *zoom: 1 }
+/******* end *******/

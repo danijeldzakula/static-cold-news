@@ -96,7 +96,8 @@
 	border-bottom: 1px solid var(--color-silver);
 	margin-bottom: 7px;
 }
-.gl__nav .menu__bottom .list__item:last-child {
+
+.gl__nav .menu .list__item:last-child {
 	border-bottom: 0;
 }
 
@@ -116,6 +117,9 @@
 	text-transform: uppercase;
 	font-family: "Roboto Condensed", sans-serif;
 	font-weight: 700;
+	display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 .gl__nav .menu__top .item__link,
 .gl__nav .menu__bottom .item__link {
@@ -203,11 +207,36 @@
 	z-index: var(--zindex-nav-trigger);
 }
 /* hover-menu-trigger */
-.nav__trigger:hover {
+.nav__trigger:hover,
+.nav__trigger:active, 
+.nav__trigger.nav__trigger--isActive {
+	background-color: var(--color-red);
 	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.nav__trigger .icon {
+	font-size: 18px;
+	font-size: 1.8rem;
+	color: var(--color-white);
+}
+.nav__trigger:hover .icon,
+.nav__trigger:active .icon,
+.nav__trigger.nav__trigger--isActive .icon {
+	color: var(--color-white);
 }
 @media only screen and (min-width: 992px) {
 	.nav__trigger {display: none}
 }
 
 /* end */
+
+
+/*
+<li class="list__item" style="display: none;">
+	<a href="#link-to" class="item__link">
+		<span class="icon">
+			<i class="fas fa-ellipsis-v"></i>
+		</span>
+	</a>
+</li>
+<!-- /.end -->
+*/

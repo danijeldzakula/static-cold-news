@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
 	<!-- Title -->
 	<title>Cold News | Naslovna</title>
@@ -30,6 +30,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" />
 	<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;1,300&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300&family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Oswald:wght@200;300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;1,300&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet" />
 	<!-- Style -->
+	<link rel="stylesheet" href="./css/bootstrap.min.css" />
 	<link rel="stylesheet" href="./css/owl.carousel.css" />
 	<link rel="stylesheet" href="./css/owl.theme.default.css" />
 	<link rel="stylesheet" href="./css/normalize.css" />
@@ -43,8 +44,13 @@
 	<link rel="stylesheet" href="./css/app.css" />
 	<!-- Script -->
 	<script src="./js/jquery.min.js"></script>
+	<script>
+		(function(html) {
+		  	html.className = html.className.replace(/\bno-js\b/, 'js')
+		})(document.documentElement);		
+	</script>
 </head>
-<body>
+<body class="loading">
 	<!-- header -->
 	<header class="gl__header">
 		<div class="header__top">
@@ -83,7 +89,7 @@
 			<div class="search">
 				<form action="" method="" class="search__form">
 					<input type="search" name="search" placeholder="Pretražite vesti" class="search__input">
-					<button class="submit__btn">
+					<button class="btn submit__btn">
 						<span class="icon">
 							<i class="fas fa-search"></i>
 						</span>
@@ -114,15 +120,9 @@
 				</a>
 			</li>	
 			<!-- /.end -->	
-			<li class="list__item">
+			<li class="list__item color-sport">
 				<a href="#link-to" class="item__link">
 					<span class="text">Sport</span>
-				</a>
-			</li>
-			<!-- /.end -->
-			<li class="list__item">
-				<a href="#link-to" class="item__link">
-					<span class="text">Biznis</span>
 				</a>
 			</li>
 			<!-- /.end -->
@@ -143,7 +143,13 @@
 					<span class="text">Kultura</span>
 				</a>
 			</li>
-			<!-- /.end -->				
+			<!-- /.end -->
+			<li class="list__item color-business">
+				<a href="#link-to" class="item__link">
+					<span class="text">Biznis</span>
+				</a>
+			</li>
+			<!-- /.end -->							
 			<li class="list__item">
 				<a href="#link-to" class="item__link">
 					<span class="icon c-red">
@@ -153,7 +159,7 @@
 				</a>
 			</li>
 			<!-- /.end -->
-			<li class="list__item">
+			<li class="list__item color-shopping">
 				<a href="#link-to" class="item__link">
 					<span class="icon c-blue">
 						<i class="fas fa-shopping-bag"></i>
@@ -161,15 +167,7 @@
 					<span class="text">Online Kupovina</span>
 				</a>
 			</li>
-			<!-- /.end -->	
-			<li class="list__item" style="display: none;">
-				<a href="#link-to" class="item__link">
-					<span class="icon">
-						<i class="fas fa-ellipsis-v"></i>
-					</span>
-				</a>
-			</li>
-			<!-- /.end -->																		
+			<!-- /.end -->																	
 		</ul>
 		<!-- /.end -->
 
@@ -224,300 +222,752 @@
 			</li>
 			<!-- /.end -->							
 		</ul>
-		<!-- /.end -->	
-			
+		<!-- /.end -->			
 	</nav>
 	<!-- /.end -->
 
 	<!-- content -->
-	<main class="gl__main">
-		<div class="container">
+    <main class="gl__main" role="main">
+    	<div class="container">
 			<div class="banner banner-top">
 				<figure class="figure__banner figure__banner--purple">
 					<a href="#link-to" class="banner-link"></a>
 					<h1 class="banner-title">IT Akademija</h1>
 					<p class="banner-subtitle">Postani programer za manje od 3 meseca i pocni da zaradjujes vrhunski</p>
-					<div class="circle circle-small"></div>
-					<div class="circle circle-small"></div>
-					<div class="circle circle-big"></div>
 				</figure>
 			</div>
-			<!-- /.end -->
+			<!-- /.end -->    		
+    	</div>
 
-			<section class="gl__section">
-				<div class="column-left">Column left</div>
-				<!-- /.end -->
-				<div class="column-central">
-					
-				  	<figure class="gl__figure gl__figure--carousel owl-carousel owl-theme">
-				    	<div class="item">
-				    		<a href="#link-to" class="carousel-link">
-					    		<img src="./img/thumb_1.jpg" alt="">
-					    		<div class="item-desc">
-					    			<h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit eos iusto deleniti, consectetur voluptas eaque?</h1>
-					    			<p class="small">Loram ispusm dolosr sit amet sit dolor ipsum delenitim consecterut coltius voluptas eastade.</p>
-					    		</div>
-					    	</a>
-				    	</div>
-				    	<div class="item">
-				    		<a href="#link-to" class="carousel-link">
-					    		<img src="./img/thumb_2.jpg" alt="">
-					    		<div class="item-desc">
-					    			<h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit eos iusto deleniti, consectetur voluptas eaque?</h1>
-					    			<p class="small">Loram ispusm dolosr sit amet sit dolor ipsum delenitim consecterut coltius voluptas eastade.</p>
-					    		</div>
-					    	</a>
-				    	</div>
-				    	<div class="item">
-				    		<a href="#link-to" class="carousel-link">
-					    		<img src="./img/thumb_3.jpg" alt="">
-					    		<div class="item-desc">
-					    			<h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit eos iusto deleniti, consectetur voluptas eaque?</h1>
-					    			<p class="small">Loram ispusm dolosr sit amet sit dolor ipsum delenitim consecterut coltius voluptas eastade.</p>
-					    		</div>
-					    	</a>
-				    	</div>	
-				    	<div class="item">
-				    		<a href="#link-to" class="carousel-link">
-					    		<img src="./img/thumb_4.jpg" alt="">
-					    		<div class="item-desc">
-					    			<h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit eos iusto deleniti, consectetur voluptas eaque?</h1>
-					    			<p class="small">Loram ispusm dolosr sit amet sit dolor ipsum delenitim consecterut coltius voluptas eastade.</p>
-					    		</div>
-					    	</a>
-				    	</div>				    					    			    	
-				  	</figure>
-				  	<!-- /.end -->
+        <div class="container">
+            <!-- Left -->
+            <section class="column-content" role="contentinfo">
+                <article class="article">
 
-				  	<article class="gl__article gl__article--thumbnail">
-				  		<a href="#link-to" target="_self" class="thumb-link clearfix">
-					  		<div class="thumb-image">
-					  			<img src="./img/thumb_1.jpg" alt="">
-					  		</div>
-					  		<div class="thumb-desc">
-					  			<h3>Lorem ispum dolor sit amet lorem ipsum dolor sit amet lorem ips</h3>
-					  			<p class="small">Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-					  		</div>
-					  	</a>
-				  	</article>
-				  	<!-- /.end -->	
-				  	<article class="gl__article gl__article--thumbnail">
-				  		<a href="#link-to" target="_self" class="thumb-link clearfix">
-					  		<div class="thumb-image">
-					  			<img src="./img/thumb_2.jpg" alt="">
-					  		</div>
-					  		<div class="thumb-desc">
-					  			<h3>Lorem ispum dolor sit amet lorem ipsum dolor sit amet lorem ips</h3>
-					  			<p class="small">Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-					  		</div>
-					  	</a>
-				  	</article>
-				  	<!-- /.end -->	
-				  	<article class="gl__article gl__article--thumbnail">
-				  		<a href="#link-to" target="_self" class="thumb-link clearfix">
-					  		<div class="thumb-image">
-					  			<img src="./img/thumb_3.jpg" alt="">
-					  		</div>
-					  		<div class="thumb-desc">
-					  			<h3>Lorem ispum dolor sit amet lorem ipsum dolor sit amet lorem ips</h3>
-					  			<p class="small">Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-					  		</div>
-					  	</a>
-				  	</article>
-				  	<!-- /.end -->					  					  		
-				  	<article class="gl__article gl__article--thumbnail">
-				  		<a href="#link-to" target="_self" class="thumb-link clearfix">
-					  		<div class="thumb-image">
-					  			<img src="./img/thumb_4.jpg" alt="">
-					  		</div>
-					  		<div class="thumb-desc">
-					  			<h3>Lorem ispum dolor sit amet lorem ipsum dolor sit amet lorem ips</h3>
-					  			<p class="small">Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-					  		</div>
-					  	</a>
-				  	</article>
-				  	<!-- /.end -->					  	
-				  	<article class="gl__article gl__article--thumbnail">
-				  		<a href="#link-to" target="_self" class="thumb-link clearfix">
-					  		<div class="thumb-image">
-					  			<img src="./img/thumb_5.jpg" alt="">
-					  		</div>
-					  		<div class="thumb-desc">
-					  			<h3>Lorem ispum dolor sit amet lorem ipsum dolor sit amet lorem ips</h3>
-					  			<p class="small">Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-					  		</div>
-					  	</a>
-				  	</article>
-				  	<!-- /.end -->					  	
-				</div>
-				<!-- /.end -->
+                    <div class="content-aside">
+                        <div class="thumb color-white b-radius-3 overflow-hidden">
+                            <a href="#link-to" class="thumb-link clearfix">
+                                <figure class="thumb-image" 
+                                    style="background-image: url('./img/thumb_5.jpg');">
+                                </figure>
+                                <main class="thumb-content">
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Omnis aliquid aperiam corrupti, magnam, porro id consequuntur eos ut reprehenderit neque quibusdam</p>
+                                </main>
+                            </a>
+                        </div>
 
-				<div class="column-full">
-					<div class="column-left">
-						Column connected
+                        <div class="thumb color-white b-radius-3 overflow-hidden">
+                            <a href="#link-to" class="thumb-link clearfix">
+                                <figure class="thumb-image" 
+                                    style="background-image: url('./img/thumb_4.jpg');">
+                                </figure>
+                                <main class="thumb-content">
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Omnis aliquid aperiam corrupti, magnam, porro id consequuntur eos ut reprehenderit neque quibusdam</p>
+                                </main>
+                            </a>
+                        </div>
+
+                        <div class="thumb color-white b-radius-3 overflow-hidden">
+                            <a href="#link-to" class="thumb-link clearfix">
+                                <figure class="thumb-image" 
+                                    style="background-image: url('./img/thumb_3.jpg');">
+                                </figure>
+                                <main class="thumb-content">
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Omnis aliquid aperiam corrupti, magnam, porro id consequuntur eos ut reprehenderit neque quibusdam</p>
+                                </main>
+                            </a>
+                        </div>
+
+                        <div class="thumb color-white b-radius-3 overflow-hidden">
+                            <a href="#link-to" class="thumb-link clearfix">
+                                <figure class="thumb-image" 
+                                    style="background-image: url('./img/thumb_2.jpg');">
+                                </figure>
+                                <main class="thumb-content">
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Omnis aliquid aperiam corrupti, magnam, porro id consequuntur eos ut reprehenderit neque quibusdam</p>
+                                </main>
+                            </a>
+                        </div>    
+
+                        <div class="thumb color-white b-radius-3 overflow-hidden">
+                            <a href="#link-to" class="thumb-link clearfix">
+                                <figure class="thumb-image" 
+                                    style="background-image: url('./img/thumb_1.jpg');">
+                                </figure>
+                                <main class="thumb-content">
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Omnis aliquid aperiam corrupti, magnam, porro id consequuntur eos ut reprehenderit neque quibusdam</p>
+                                </main>
+                            </a>
+                        </div>                                     
+                    </div>
+
+                    <div class="content-central">
+					  	<figure class="gl__figure gl__figure--carousel owl-carousel owl-theme">
+					    	<div class="item">
+					    		<a href="#link-to" class="carousel-link">
+						    		<img src="./img/thumb_1.jpg" alt="">
+						    		<div class="item-desc">
+						    			<h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit eos iusto deleniti, consectetur voluptas eaque?</h1>
+						    			<p class="small">Loram ispusm dolosr sit amet sit dolor ipsum delenitim consecterut coltius voluptas eastade.</p>
+						    		</div>
+						    	</a>
+						    	<footer class="item-footer">
+						    		<ul class="footer-btn">
+						    			<li>
+						    				<span class="c-red">17:45</span>
+						    			</li>
+						    			<li>
+						    				<a href="#link-to" class="btn">
+						    					<i class="far fa-comments"></i>
+						    				</a>
+						    			</li>
+						    		</ul>
+						    		
+						    		<ul class="footer-btn">
+						    			<li>
+						    				<a href="#link-to" class="btn">
+						    					<span>
+						    						<i class="fas fa-share"></i>
+						    					</span>
+						    					<span>Share</span>
+						    				</a>
+						    			</li>
+						    			<li>
+						    				<a href="#link-to" class="btn">
+						    					<i class="far fa-bookmark"></i>
+						    				</a>
+						    			</li>
+						    		</ul>						    		
+						    	</footer>
+					    	</div>	
+
+					    	<div class="item">
+					    		<a href="#link-to" class="carousel-link">
+						    		<img src="./img/thumb_2.jpg" alt="">
+						    		<div class="item-desc">
+						    			<h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit eos iusto deleniti, consectetur voluptas eaque?</h1>
+						    			<p class="small">Loram ispusm dolosr sit amet sit dolor ipsum delenitim consecterut coltius voluptas eastade.</p>
+						    		</div>
+						    	</a>
+						    	<footer class="item-footer">
+						    		<ul class="footer-btn">
+						    			<li>
+						    				<span class="c-red">17:45</span>
+						    			</li>
+						    			<li>
+						    				<a href="#link-to" class="btn">
+						    					<i class="far fa-comments"></i>
+						    				</a>
+						    			</li>
+						    		</ul>
+						    		
+						    		<ul class="footer-btn">
+						    			<li>
+						    				<a href="#link-to" class="btn">
+						    					<span>
+						    						<i class="fas fa-share"></i>
+						    					</span>
+						    					<span>Share</span>
+						    				</a>
+						    			</li>
+						    			<li>
+						    				<a href="#link-to" class="btn">
+						    					<i class="far fa-bookmark"></i>
+						    				</a>
+						    			</li>
+						    		</ul>						    		
+						    	</footer>
+					    	</div>	
+
+					    	<div class="item">
+					    		<a href="#link-to" class="carousel-link">
+						    		<img src="./img/thumb_3.jpg" alt="">
+						    		<div class="item-desc">
+						    			<h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit eos iusto deleniti, consectetur voluptas eaque?</h1>
+						    			<p class="small">Loram ispusm dolosr sit amet sit dolor ipsum delenitim consecterut coltius voluptas eastade.</p>
+						    		</div>
+						    	</a>
+						    	<footer class="item-footer">
+						    		<ul class="footer-btn">
+						    			<li>
+						    				<span class="c-red">17:45</span>
+						    			</li>
+						    			<li>
+						    				<a href="#link-to" class="btn">
+						    					<i class="far fa-comments"></i>
+						    				</a>
+						    			</li>
+						    		</ul>
+						    		
+						    		<ul class="footer-btn">
+						    			<li>
+						    				<a href="#link-to" class="btn">
+						    					<span>
+						    						<i class="fas fa-share"></i>
+						    					</span>
+						    					<span>Share</span>
+						    				</a>
+						    			</li>
+						    			<li>
+						    				<a href="#link-to" class="btn">
+						    					<i class="far fa-bookmark"></i>
+						    				</a>
+						    			</li>
+						    		</ul>						    		
+						    	</footer>
+					    	</div>	
+
+					    	<div class="item">
+					    		<a href="#link-to" class="carousel-link">
+						    		<img src="./img/thumb_4.jpg" alt="">
+						    		<div class="item-desc">
+						    			<h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit eos iusto deleniti, consectetur voluptas eaque?</h1>
+						    			<p class="small">Loram ispusm dolosr sit amet sit dolor ipsum delenitim consecterut coltius voluptas eastade.</p>
+						    		</div>
+						    	</a>
+						    	<footer class="item-footer">
+						    		<ul class="footer-btn">
+						    			<li>
+						    				<span class="c-red">17:45</span>
+						    			</li>
+						    			<li>
+						    				<a href="#link-to" class="btn">
+						    					<i class="far fa-comments"></i>
+						    				</a>
+						    			</li>
+						    		</ul>
+						    		
+						    		<ul class="footer-btn">
+						    			<li>
+						    				<a href="#link-to" class="btn">
+						    					<span>
+						    						<i class="fas fa-share"></i>
+						    					</span>
+						    					<span>Share</span>
+						    				</a>
+						    			</li>
+						    			<li>
+						    				<a href="#link-to" class="btn">
+						    					<i class="far fa-bookmark"></i>
+						    				</a>
+						    			</li>
+						    		</ul>						    		
+						    	</footer>
+					    	</div>	
+
+					    	<div class="item">
+					    		<a href="#link-to" class="carousel-link">
+						    		<img src="./img/thumb_5.jpg" alt="">
+						    		<div class="item-desc">
+						    			<h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit eos iusto deleniti, consectetur voluptas eaque?</h1>
+						    			<p class="small">Loram ispusm dolosr sit amet sit dolor ipsum delenitim consecterut coltius voluptas eastade.</p>
+						    		</div>
+						    	</a>
+						    	<footer class="item-footer">
+						    		<ul class="footer-btn">
+						    			<li>
+						    				<span class="c-red">17:45</span>
+						    			</li>
+						    			<li>
+						    				<a href="#link-to" class="btn">
+						    					<i class="far fa-comments"></i>
+						    				</a>
+						    			</li>
+						    		</ul>
+						    		
+						    		<ul class="footer-btn">
+						    			<li>
+						    				<a href="#link-to" class="btn">
+						    					<span>
+						    						<i class="fas fa-share"></i>
+						    					</span>
+						    					<span>Share</span>
+						    				</a>
+						    			</li>
+						    			<li>
+						    				<a href="#link-to" class="btn">
+						    					<i class="far fa-bookmark"></i>
+						    				</a>
+						    			</li>
+						    		</ul>						    		
+						    	</footer>
+					    	</div>						    						    						    						    			    					    			    	
+					  	</figure>
+
+                        <div class="thumb thumb-lg color-white b-radius-3 box-shadow-1 overflow-hidden">
+                            <a href="#link-to" class="thumb-link thumb-lg-link clearfix">
+                                <figure class="thumb-image" 
+                                    style="background-image: url('./img/thumb_5.jpg');">
+                                </figure>
+                                <main class="thumb-content">
+                                    <h1>Lorem ipsum dolor, sit, amet consectetur adipisicing elit. Earum deserunt voluptatum!</h1>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Omnis aliquid aperiam corrupti, magnam, porro id consequuntur eos ut reprehenderit neque quibusdam</p>
+                                </main>
+                            </a>
+                            <footer class="thumb-footer">
+					    		<ul class="footer-btn">
+					    			<li>
+					    				<span class="c-red">17:45</span>
+					    			</li>
+					    			<li>
+					    				<a href="#link-to" class="btn">
+					    					<i class="far fa-comments"></i>
+					    				</a>
+					    			</li>
+					    		</ul>
+					    		
+					    		<ul class="footer-btn">
+					    			<li>
+					    				<a href="#link-to" class="btn">
+					    					<span>
+					    						<i class="fas fa-share"></i>
+					    					</span>
+					    					<span>Share</span>
+					    				</a>
+					    			</li>
+					    			<li>
+					    				<a href="#link-to" class="btn">
+					    					<i class="far fa-bookmark"></i>
+					    				</a>
+					    			</li>
+					    		</ul>	
+                            </footer>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 mb-15">
+                                <div class="thumb color-white b-radius-3 box-shadow-1 overflow-hidden">
+                                    <a href="#link-to" class="thumb-link clearfix">
+                                        <figure class="thumb-image" 
+                                            style="background-image: url('./img/thumb_4.jpg');">
+                                        </figure>
+                                        <main class="thumb-content">
+                                            <h1>Lorem ipsum dolor, sit, amet consectetur adipisicing elit. Earum deserunt voluptatum!</h1>
+                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Omnis aliquid aperiam corrupti, magnam, porro id consequuntur eos ut reprehenderit neque quibusdam</p>
+                                        </main>
+                                    </a>
+                                    <footer class="thumb-footer">
+							    		<ul class="footer-btn">
+							    			<li>
+							    				<span class="c-red">17:45</span>
+							    			</li>
+							    			<li>
+							    				<a href="#link-to" class="btn">
+							    					<i class="far fa-comments"></i>
+							    				</a>
+							    			</li>
+							    		</ul>
+							    		
+							    		<ul class="footer-btn">
+							    			<li>
+							    				<a href="#link-to" class="btn">
+							    					<span>
+							    						<i class="fas fa-share"></i>
+							    					</span>
+							    					<span>Share</span>
+							    				</a>
+							    			</li>
+							    			<li>
+							    				<a href="#link-to" class="btn">
+							    					<i class="far fa-bookmark"></i>
+							    				</a>
+							    			</li>
+							    		</ul>
+                                    </footer>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-15">
+                                <div class="thumb color-white b-radius-3 box-shadow-1 overflow-hidden">
+                                    <a href="#link-to" class="thumb-link clearfix">
+                                        <figure class="thumb-image" 
+                                            style="background-image: url('./img/thumb_3.jpg');">
+                                        </figure>
+                                        <main class="thumb-content">
+                                            <h1>Lorem ipsum dolor, sit, amet consectetur adipisicing elit. Earum deserunt voluptatum!</h1>
+                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Omnis aliquid aperiam corrupti, magnam, porro id consequuntur eos ut reprehenderit neque quibusdam</p>
+                                        </main>
+                                    </a>
+                                    <footer class="thumb-footer">
+							    		<ul class="footer-btn">
+							    			<li>
+							    				<span class="c-red">17:45</span>
+							    			</li>
+							    			<li>
+							    				<a href="#link-to" class="btn">
+							    					<i class="far fa-comments"></i>
+							    				</a>
+							    			</li>
+							    		</ul>
+							    		
+							    		<ul class="footer-btn">
+							    			<li>
+							    				<a href="#link-to" class="btn">
+							    					<span>
+							    						<i class="fas fa-share"></i>
+							    					</span>
+							    					<span>Share</span>
+							    				</a>
+							    			</li>
+							    			<li>
+							    				<a href="#link-to" class="btn">
+							    					<i class="far fa-bookmark"></i>
+							    				</a>
+							    			</li>
+							    		</ul>
+                                    </footer>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="thumb thumb-lg color-white b-radius-3 box-shadow-1 overflow-hidden">
+                            <a href="#link-to" class="thumb-link thumb-lg-link clearfix">
+                                <figure class="thumb-image" 
+                                    style="background-image: url('./img/thumb_2.jpg');">
+                                </figure>
+                                <main class="thumb-content">
+                                    <h1>Lorem ipsum dolor, sit, amet consectetur adipisicing elit. Earum deserunt voluptatum!</h1>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Omnis aliquid aperiam corrupti, magnam, porro id consequuntur eos ut reprehenderit neque quibusdam</p>
+                                </main>
+                            </a>
+                            <footer class="thumb-footer">
+					    		<ul class="footer-btn">
+					    			<li>
+					    				<span class="c-red">17:45</span>
+					    			</li>
+					    			<li>
+					    				<a href="#link-to" class="btn">
+					    					<i class="far fa-comments"></i>
+					    				</a>
+					    			</li>
+					    		</ul>
+					    		
+					    		<ul class="footer-btn">
+					    			<li>
+					    				<a href="#link-to" class="btn">
+					    					<span>
+					    						<i class="fas fa-share"></i>
+					    					</span>
+					    					<span>Share</span>
+					    				</a>
+					    			</li>
+					    			<li>
+					    				<a href="#link-to" class="btn">
+					    					<i class="far fa-bookmark"></i>
+					    				</a>
+					    			</li>
+					    		</ul>
+                            </footer>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 mb-15">
+                                <div class="thumb color-white b-radius-3 box-shadow-1 overflow-hidden">
+                                    <a href="#link-to" class="thumb-link clearfix">
+                                        <figure class="thumb-image" 
+                                            style="background-image: url('./img/thumb_1.jpg');">
+                                        </figure>
+                                        <main class="thumb-content">
+                                            <h1>Lorem ipsum dolor, sit, amet consectetur adipisicing elit. Earum deserunt voluptatum!</h1>
+                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Omnis aliquid aperiam corrupti, magnam, porro id consequuntur eos ut reprehenderit neque quibusdam</p>
+                                        </main>
+                                    </a>
+                                    <footer class="thumb-footer">
+							    		<ul class="footer-btn">
+							    			<li>
+							    				<span class="c-red">17:45</span>
+							    			</li>
+							    			<li>
+							    				<a href="#link-to" class="btn">
+							    					<i class="far fa-comments"></i>
+							    				</a>
+							    			</li>
+							    		</ul>
+							    		
+							    		<ul class="footer-btn">
+							    			<li>
+							    				<a href="#link-to" class="btn">
+							    					<span>
+							    						<i class="fas fa-share"></i>
+							    					</span>
+							    					<span>Share</span>
+							    				</a>
+							    			</li>
+							    			<li>
+							    				<a href="#link-to" class="btn">
+							    					<i class="far fa-bookmark"></i>
+							    				</a>
+							    			</li>
+							    		</ul>
+                                    </footer>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mb-15">
+                                <div class="thumb color-white b-radius-3 box-shadow-1 overflow-hidden">
+                                    <a href="#link-to" class="thumb-link clearfix">
+                                        <figure class="thumb-image" 
+                                            style="background-image: url('./img/thumb_5.jpg');">
+                                        </figure>
+                                        <main class="thumb-content">
+                                            <h1>Lorem ipsum dolor, sit, amet consectetur adipisicing elit. Earum deserunt voluptatum!</h1>
+                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Omnis aliquid aperiam corrupti, magnam, porro id consequuntur eos ut reprehenderit neque quibusdam</p>
+                                        </main>
+                                    </a>
+                                    <footer class="thumb-footer">
+							    		<ul class="footer-btn">
+							    			<li>
+							    				<span class="c-red">17:45</span>
+							    			</li>
+							    			<li>
+							    				<a href="#link-to" class="btn">
+							    					<i class="far fa-comments"></i>
+							    				</a>
+							    			</li>
+							    		</ul>
+							    		
+							    		<ul class="footer-btn">
+							    			<li>
+							    				<a href="#link-to" class="btn">
+							    					<span>
+							    						<i class="fas fa-share"></i>
+							    					</span>
+							    					<span>Share</span>
+							    				</a>
+							    			</li>
+							    			<li>
+							    				<a href="#link-to" class="btn">
+							    					<i class="far fa-bookmark"></i>
+							    				</a>
+							    			</li>
+							    		</ul>
+                                    </footer>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="thumb thumb-lg color-white b-radius-3 box-shadow-1 overflow-hidden">
+                            <a href="#link-to" class="thumb-link thumb-lg-link clearfix">
+                                <figure class="thumb-image" 
+                                    style="background-image: url('./img/thumb_4.jpg');">
+                                </figure>
+                                <main class="thumb-content">
+                                    <h1>Lorem ipsum dolor, sit, amet consectetur adipisicing elit. Earum deserunt voluptatum!</h1>
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Omnis aliquid aperiam corrupti, magnam, porro id consequuntur eos ut reprehenderit neque quibusdam</p>
+                                </main>
+                            </a>
+                            <footer class="thumb-footer">
+					    		<ul class="footer-btn">
+					    			<li>
+					    				<span class="c-red">17:45</span>
+					    			</li>
+					    			<li>
+					    				<a href="#link-to" class="btn">
+					    					<i class="far fa-comments"></i>
+					    				</a>
+					    			</li>
+					    		</ul>
+					    		
+					    		<ul class="footer-btn">
+					    			<li>
+					    				<a href="#link-to" class="btn">
+					    					<span>
+					    						<i class="fas fa-share"></i>
+					    					</span>
+					    					<span>Share</span>
+					    				</a>
+					    			</li>
+					    			<li>
+					    				<a href="#link-to" class="btn">
+					    					<i class="far fa-bookmark"></i>
+					    				</a>
+					    			</li>
+					    		</ul>
+                            </footer>
+                        </div>
+                    </div>
+
+                </article>
+
+                <article class="article article-connected b-radius-3 overflow-hidden color-sport">
+                    <div class="content-aside">
+                        <div class="ratio">
+                            <h1>Sport</h1>
+                        </div>
+                    </div>
+                    <div class="content-central">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="thumb color-card-sport b-radius-3 box-shadow-1 overflow-hidden">
+                                    <a href="#link-to" class="thumb-link clearfix">
+                                        <figure class="thumb-image" 
+                                            style="background-image: url('./img/thumb_3.jpg');">
+                                        </figure>
+                                        <main class="thumb-content">
+                                            <h1>Lorem ipsum dolor, sit, amet consectetur adipisicing elit. Earum deserunt voluptatum!</h1>
+                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Omnis aliquid aperiam corrupti, magnam, porro id consequuntur eos ut reprehenderit neque quibusdam</p>
+                                        </main>
+                                    </a>
+                                    <footer class="thumb-footer">
+							    		<ul class="footer-btn">
+							    			<li>
+							    				<span class="c-red">17:45</span>
+							    			</li>
+							    			<li>
+							    				<a href="#link-to" class="btn">
+							    					<i class="far fa-comments"></i>
+							    				</a>
+							    			</li>
+							    		</ul>
+							    		
+							    		<ul class="footer-btn">
+							    			<li>
+							    				<a href="#link-to" class="btn">
+							    					<span>
+							    						<i class="fas fa-share"></i>
+							    					</span>
+							    					<span class="lg-hidden-text">Share</span>
+							    				</a>
+							    			</li>
+							    			<li>
+							    				<a href="#link-to" class="btn">
+							    					<i class="far fa-bookmark"></i>
+							    				</a>
+							    			</li>
+							    		</ul>
+                                    </footer>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="thumb color-card-sport b-radius-3 box-shadow-1 overflow-hidden">
+                                    <a href="#link-to" class="thumb-link clearfix">
+                                        <figure class="thumb-image" 
+                                            style="background-image: url('./img/thumb_2.jpg');">
+                                        </figure>
+                                        <main class="thumb-content">
+                                            <h1>Lorem ipsum dolor, sit, amet consectetur adipisicing elit. Earum deserunt voluptatum!</h1>
+                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Omnis aliquid aperiam corrupti, magnam, porro id consequuntur eos ut reprehenderit neque quibusdam</p>
+                                        </main>
+                                    </a>
+                                    <footer class="thumb-footer">
+							    		<ul class="footer-btn">
+							    			<li>
+							    				<span class="c-red">17:45</span>
+							    			</li>
+							    			<li>
+							    				<a href="#link-to" class="btn">
+							    					<i class="far fa-comments"></i>
+							    				</a>
+							    			</li>
+							    		</ul>
+							    		
+							    		<ul class="footer-btn">
+							    			<li>
+							    				<a href="#link-to" class="btn">
+							    					<span>
+							    						<i class="fas fa-share"></i>
+							    					</span>
+							    					<span class="lg-hidden-text">Share</span>
+							    				</a>
+							    			</li>
+							    			<li>
+							    				<a href="#link-to" class="btn">
+							    					<i class="far fa-bookmark"></i>
+							    				</a>
+							    			</li>
+							    		</ul>
+                                    </footer>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="thumb color-card-sport b-radius-3 box-shadow-1 overflow-hidden">
+                                    <a href="#link-to" class="thumb-link clearfix">
+                                        <main class="thumb-content">
+                                            <h3>Lorem ipsum dolor, sit, amet consectetur adipisicing elit. Earum deserunt voluptatum!</h3>
+                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Omnis aliquid aperiam corrupti, magnam, porro id consequuntur eos ut reprehenderit neque quibusdam</p>
+                                        </main>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="thumb color-card-sport b-radius-3 box-shadow-1 overflow-hidden">
+                                    <a href="#link-to" class="thumb-link clearfix">
+                                        <main class="thumb-content">
+                                            <h3>Lorem ipsum dolor, sit, amet consectetur adipisicing elit. Earum deserunt voluptatum!</h3>
+                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing, elit. Omnis aliquid aperiam corrupti, magnam, porro id consequuntur eos ut reprehenderit neque quibusdam</p>
+                                        </main>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <!-- /.end -->
+            <!-- Right -->
+            <aside class="column-aside" role="complementary">
+				<div class="area static-area">
+					<div class="tabs">
+						<ul class="tabs-nav">
+							<li class="tab-link current" data-tab="info-news">Info najnovije</li>
+							
+							<li class="tab-link" data-tab="info-sport">Sport najnovije</li>
+						</ul>
+
+						<div class="tabs-content">
+							<div id="info-news" class="tab-content current">
+								<a href="#link-to" class="default-link">
+									<span class="time">17:45</span>
+									<span class="link-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates eos, voluptatem earum dignissimos minima, totam possimus delectus ex sit neque eius? Inventore, pariatur explicabo cumque, suscipit itaque provident laboriosam velit!</span>
+								</a>
+
+								<a href="#link-to" class="default-link">
+									<span class="time">18:28</span>
+									<span class="link-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates eos, voluptatem earum dignissimos minima, totam possimus delectus ex sit neque eius? Inventore, pariatur explicabo cumque, suscipit itaque provident laboriosam velit!</span>
+								</a>
+
+								<a href="#link-to" class="default-link">
+									<span class="time">19:32</span>
+									<span class="link-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates eos, voluptatem earum dignissimos minima, totam possimus delectus ex sit neque eius? Inventore, pariatur explicabo cumque, suscipit itaque provident laboriosam velit!</span>
+								</a>
+
+								<a href="#link-to" class="default-link">
+									<span class="time">21:55</span>
+									<span class="link-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates eos, voluptatem earum dignissimos minima, totam possimus delectus ex sit neque eius? Inventore, pariatur explicabo cumque, suscipit itaque provident laboriosam velit!</span>
+								</a>																								
+							</div>
+							<div id="info-sport" class="tab-content">
+								<a href="#link-to" class="default-link">
+									<span class="time">10:45</span>
+									<span class="link-desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt ducimus saepe neque atque quo dolorum, numquam minus voluptatum vitae provident, officia eligendi laborum at expedita ab labore porro doloribus autem.</span>
+								</a>
+
+								<a href="#link-to" class="default-link">
+									<span class="time">16:38</span>
+									<span class="link-desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt ducimus saepe neque atque quo dolorum, numquam minus voluptatum vitae provident, officia eligendi laborum at expedita ab labore porro doloribus autem.</span>
+								</a>
+
+								<a href="#link-to" class="default-link">
+									<span class="time">15:34</span>
+									<span class="link-desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt ducimus saepe neque atque quo dolorum, numquam minus voluptatum vitae provident, officia eligendi laborum at expedita ab labore porro doloribus autem.</span>
+								</a>
+
+								<a href="#link-to" class="default-link">
+									<span class="time">22:59</span>
+									<span class="link-desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt ducimus saepe neque atque quo dolorum, numquam minus voluptatum vitae provident, officia eligendi laborum at expedita ab labore porro doloribus autem!</span>
+								</a>
+							</div>
+						</div>
 					</div>
-					<!-- /.end -->
-					<div class="column-central">
-						<p>Column central</p>
-						<div>
-							<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam, quo placeat maiores eos maxime neque nam similique, vero illo architecto optio sapiente perferendis nisi totam, quia itaque incidunt necessitatibus voluptas? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda sint, aliquam tenetur nihil esse sit libero porro voluptates. Ab maiores illum ducimus expedita enim minus ad, magnam. Illum est, odio.</p>
-							<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam, quo placeat maiores eos maxime neque nam similique, vero illo architecto optio sapiente perferendis nisi totam, quia itaque incidunt necessitatibus voluptas? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda sint, aliquam tenetur nihil esse sit libero porro voluptates. Ab maiores illum ducimus expedita enim minus ad, magnam. Illum est, odio.</p>
-						</div>				
-					</div>
-					<!-- /.end -->					
-				</div>
-				<!-- /.end -->
-			
-				<div class="column-left">Column left</div>
-				<!-- /.end -->
-				<div class="column-central">
-					Column central
-				  	<figure class="gl__figure gl__figure--carousel owl-carousel owl-theme">
-				    	<div class="item">
-				    		<a href="#link-to" class="carousel-link">
-					    		<img src="./img/thumb_1.jpg" alt="">
-					    		<div class="item-desc">
-					    			<h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit eos iusto deleniti, consectetur voluptas eaque?</h1>
-					    			<p class="small">Loram ispusm dolosr sit amet sit dolor ipsum delenitim consecterut coltius voluptas eastade.</p>
-					    		</div>
-					    	</a>
-				    	</div>
-				    	<div class="item">
-				    		<a href="#link-to" class="carousel-link">
-					    		<img src="./img/thumb_2.jpg" alt="">
-					    		<div class="item-desc">
-					    			<h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit eos iusto deleniti, consectetur voluptas eaque?</h1>
-					    			<p class="small">Loram ispusm dolosr sit amet sit dolor ipsum delenitim consecterut coltius voluptas eastade.</p>
-					    		</div>
-					    	</a>
-				    	</div>
-				    	<div class="item">
-				    		<a href="#link-to" class="carousel-link">
-					    		<img src="./img/thumb_3.jpg" alt="">
-					    		<div class="item-desc">
-					    			<h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit eos iusto deleniti, consectetur voluptas eaque?</h1>
-					    			<p class="small">Loram ispusm dolosr sit amet sit dolor ipsum delenitim consecterut coltius voluptas eastade.</p>
-					    		</div>
-					    	</a>
-				    	</div>	
-				    	<div class="item">
-				    		<a href="#link-to" class="carousel-link">
-					    		<img src="./img/thumb_4.jpg" alt="">
-					    		<div class="item-desc">
-					    			<h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit eos iusto deleniti, consectetur voluptas eaque?</h1>
-					    			<p class="small">Loram ispusm dolosr sit amet sit dolor ipsum delenitim consecterut coltius voluptas eastade.</p>
-					    		</div>
-					    	</a>
-				    	</div>				    					    			    	
-				  	</figure>	
-
-				  	<article class="gl__article gl__article--thumbnail">
-				  		<a href="#link-to" target="_self" class="thumb-link clearfix">
-					  		<div class="thumb-image">
-					  			<img src="./img/thumb_1.jpg" alt="">
-					  		</div>
-					  		<div class="thumb-desc">
-					  			<h3>Lorem ispum dolor sit amet lorem ipsum dolor sit amet lorem ips</h3>
-					  			<p class="small">Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-					  		</div>
-					  	</a>
-				  	</article>
-				  	<!-- /.end -->	
-				  	<article class="gl__article gl__article--thumbnail">
-				  		<a href="#link-to" target="_self" class="thumb-link clearfix">
-					  		<div class="thumb-image">
-					  			<img src="./img/thumb_2.jpg" alt="">
-					  		</div>
-					  		<div class="thumb-desc">
-					  			<h3>Lorem ispum dolor sit amet lorem ipsum dolor sit amet lorem ips</h3>
-					  			<p class="small">Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-					  		</div>
-					  	</a>
-				  	</article>
-				  	<!-- /.end -->	
-				  	<article class="gl__article gl__article--thumbnail">
-				  		<a href="#link-to" target="_self" class="thumb-link clearfix">
-					  		<div class="thumb-image">
-					  			<img src="./img/thumb_3.jpg" alt="">
-					  		</div>
-					  		<div class="thumb-desc">
-					  			<h3>Lorem ispum dolor sit amet lorem ipsum dolor sit amet lorem ips</h3>
-					  			<p class="small">Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-					  		</div>
-					  	</a>
-				  	</article>
-				  	<!-- /.end -->					  					  		
-				  	<article class="gl__article gl__article--thumbnail">
-				  		<a href="#link-to" target="_self" class="thumb-link clearfix">
-					  		<div class="thumb-image">
-					  			<img src="./img/thumb_4.jpg" alt="">
-					  		</div>
-					  		<div class="thumb-desc">
-					  			<h3>Lorem ispum dolor sit amet lorem ipsum dolor sit amet lorem ips</h3>
-					  			<p class="small">Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-					  		</div>
-					  	</a>
-				  	</article>
-				  	<!-- /.end -->					  	
-				  	<article class="gl__article gl__article--thumbnail">
-				  		<a href="#link-to" target="_self" class="thumb-link clearfix">
-					  		<div class="thumb-image">
-					  			<img src="./img/thumb_5.jpg" alt="">
-					  		</div>
-					  		<div class="thumb-desc">
-					  			<h3>Lorem ispum dolor sit amet lorem ipsum dolor sit amet lorem ips</h3>
-					  			<p class="small">Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-					  		</div>
-					  	</a>
-				  	</article>
-				  	<!-- /.end -->						  					
 				</div>
 				<!-- /.end -->
 
-				<div class="column-full column-sport">
-					<div class="column-left">
-						Column connected
-					</div>
-					<!-- /.end -->
-					<div class="column-central">
-						<p>Column central</p>
-						<div>
-							<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam, quo placeat maiores eos maxime neque nam similique, vero illo architecto optio sapiente perferendis nisi totam, quia itaque incidunt necessitatibus voluptas? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda sint, aliquam tenetur nihil esse sit libero porro voluptates. Ab maiores illum ducimus expedita enim minus ad, magnam. Illum est, odio.</p>
-							<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam, quo placeat maiores eos maxime neque nam similique, vero illo architecto optio sapiente perferendis nisi totam, quia itaque incidunt necessitatibus voluptas? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda sint, aliquam tenetur nihil esse sit libero porro voluptates. Ab maiores illum ducimus expedita enim minus ad, magnam. Illum est, odio.</p>
-						</div>				
-					</div>
-					<!-- /.end -->					
-				</div>
-				<!-- /.end -->				
-			</section>
-			<!-- /.end -->
-
-
-			<aside class="gl__aside">
-				<div class="not">
-					<h1>Not</h1>
-				</div>
-
-				<div class="sticky-area">
-					<div class="banner-right">
-						<h1>Sticky</h1>
+				<div class="area sticky-area">
+					<div class="banner-right" data-aspect-ratio="1:1">
+						<h1></h1>
 					</div>
 				</div>	
-
-				<div class="not">
-					<h1>Not</h1>
-				</div>		
-				
-				<div class="sticky-area">
-					<div class="banner-right">
-						<h1>Sticky</h1>
-					</div>
-				</div>									
-			</aside>									
-			<!-- /.end -->
-		</div>
-		<!-- /.end -->
-	</main>
+				<!-- /.end -->              
+            </aside>
+            <!-- /.end -->
+        </div>
+    </main>
 	<!-- /.end -->
 
 	<!-- footer -->
@@ -538,6 +988,7 @@
 	<!-- /.end -->	
 
 	<!-- Script -->	
+	<script src="./js/script.js"></script>
 	<script src="./js/owl.carousel.js"></script>
 	<script src="./js/app.js"></script>
 </body>

@@ -33,6 +33,19 @@ $(function() {
 		$('.search').removeClass('search--isActive');
 		$('.search__overlay').removeClass('search__overlay--isActive');
 	});	
+	/* end */
+
+	/* tabs */
+	$('.tabs-nav li').on('click', function(e) {
+		var tab_id = $(this).attr('data-tab');
+
+		$('.tabs-nav li').removeClass('current');
+		$('.tab-content').removeClass('current');
+
+		$(this).addClass('current');
+		$("#"+tab_id).addClass('current');
+	})
+	/* end */
 
 	/* carousel */
 	$('.gl__figure').owlCarousel({
@@ -49,4 +62,20 @@ $(function() {
 	    navText: ["<span class='show-for-sr'><i class='fas fa-angle-left'></i></span>","<span class='show-for-sr'><i class='fas fa-angle-right'></i></span>"]
 	});
 	/* end */
+	
+	/*
+	$(window).on('load', function(e) { // makes sure the whole site is loaded
+	  	$('#status').fadeOut(); // will first fade out the loading animation
+	  	$('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
+	  	$('#overlay').fadeOut(); // removed absolute overlay after load page 
+	  	$('body').delay(400).removeClass('loading').addClass('loaded');
+	});
+	*/
+
+	/*
+    setTimeout(function() {
+        $('body').addClass('loaded');
+    }, 3500);
+	*/
+
 });

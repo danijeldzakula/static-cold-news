@@ -4,13 +4,22 @@
 :root {
 	--color-light: #9b9b9b;
 	--color-dark: #262626;
-	--color-navyblue: #3C096C; /* #415D43;*/ /*#03045E */ /* #0B525B */
+	--color-navyblue: #5A189A; 
+    /* #415D43;*/ 
+    /* #03045E */ 
+    /* #0B525B */ 
+    /* #FCA311 */ 
+    /* #3C096C */
+    /* #5A189A */
+    /* #5F0F40 */
+    /* #9E0059 */
 	--color-commandblue: #0077B6;
 	--color-ceruleancrayola: #00B4D8;
 	--color-skybluecrayola: #90E0EF;
 	--color-white: #FEFCFB;
-	--color-red: #D00000;
+	--color-red: #EF233C; /* #FF0054 */ /* #EF233C */ /* #D90429 */ /* #D00000 */
 	--color-silver: #E6E6E6;
+    --color-dimgray: #f4f4f4; /* #E5E5E5 */
 
 	--bg-header: var(--color-navyblue);
 	--bg-header-right: var(--color-white);
@@ -101,7 +110,7 @@ body {
     line-height: 1.618;
     color: var(--color-black);
     text-align: left;
-    background-color: var(--color-white);
+    background-color: var(--color-dimgray);
 }
 /******* end *******/
 
@@ -128,3 +137,61 @@ body.search-overflow-hidden {
 :-ms-input-placeholder { color: var(--color-black)}
 ::-ms-input-placeholder { color: var(--color-black)}
 /******* end *******/
+
+[data-aspect-ratio] {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+}
+
+[data-aspect-ratio] {
+  position: relative;
+}
+
+[data-aspect-ratio]:before {
+    content: '';
+    display: block;
+}
+
+[data-aspect-ratio] > * {
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+[data-aspect-ratio="3:1"]:before {
+    padding-top: 33.33%;
+}
+[data-aspect-ratio="2:1"]:before {
+    padding-top: 50%;
+}
+[data-aspect-ratio="16:9"]:before {
+    padding-top: 56.25%;
+}
+[data-aspect-ratio="3:2"]:before {
+    padding-top: 66.66%;
+}
+[data-aspect-ratio="4:3"]:before {
+    padding-top: 75%;
+}
+[data-aspect-ratio="1:1"]:before {
+    padding-top: 100%;
+}
+[data-aspect-ratio="3:4"]:before {
+    padding-top: 133.33%;
+}
+[data-aspect-ratio="2:3"]:before {
+    padding-top: 150%;
+}
+[data-aspect-ratio="9:16"]:before {
+    padding-top: 177.77%;
+}
+[data-aspect-ratio="1:2"]:before {
+    padding-top: 200%;
+}
+[data-aspect-ratio="1:3"]:before {
+    padding-top: 300%;
+}

@@ -74,15 +74,18 @@
 	display: none
 }
 @media only screen and (min-width: 576px) {
-	.gl__header .btn .icon {
+
+}
+@media only screen and (min-width: 768px) {
+	.gl__header .submit__btn .icon {
 		padding-left: 0;
 	}
-	.gl__header .btn {
+	.gl__header .submit__btn {
 		display: flex;
 		align-items: center;
 		justify-content: center
-	}
-	.gl__header .btn .text { display: block }	
+	}	
+	.gl__header .btn .text { display: block }
 }
 @media only screen and (min-width: 992px) {
 	.gl__header .btn .icon {
@@ -106,12 +109,7 @@
 .gl__header .search-trigger,
 .gl__header .login-btn {
 	border-radius: 3px;
-	border: 1px solid var(--bg-button-border);
-}
-/* hover-search-login */
-.gl__header .search-trigger:hover,
-.gl__header .login-btn:hover {
-	
+	border: 1px solid var(--color-navyblue);
 }
 /* end */
 
@@ -126,7 +124,8 @@
 	font-weight: 600;
 	font-size: 16px;
 	font-size: 1.6rem;
-	color: var(--color-white)
+	color: var(--color-white);
+	line-height: normal;
 }
 /* end */
 /* login-btn */
@@ -140,14 +139,25 @@
 	font-weight: 600;
 	font-size: 16px;
 	font-size: 1.6rem;	
-	color: var(--color-white)
+	color: var(--color-white);
+	line-height: normal;
 }
 /* end */
-@media only screen and (min-width: 576px) {
+@media only screen and (min-width: 768px) {
 	.gl__header .search-trigger,
 	.gl__header .login-btn {
-		min-width: 130px;
+		padding-right: 15px;
+		padding-left: 15px;
 	}
+}
+
+/* hover header btn */
+.gl__header .search-trigger:hover,
+.gl__header .search-trigger:active,
+.gl__header .login-btn:hover,
+.gl__header .login-btn:active {
+	background-color: var(--color-red);
+	border: 1px solid var(--color-navyblue);
 }
 /* end */
 
@@ -190,13 +200,27 @@
     position: relative;
     width: 133px;
     margin: 0;
-    padding: 0;
+    padding: 0 15px;
     border: 0;
     outline: 0;
     z-index: 10;
     background-color: var(--bg-button);
     cursor: pointer;
     color: var(--color-white)
+}
+
+.gl__header .search .submit__btn .icon {
+
+}
+
+.gl__header .search .submit__btn .text {
+	font-family: "Roboto Condensed", sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 16px;
+    font-size: 1.6rem;
+    color: var(--color-white);
+    line-height: normal;
 }
 
 /* overlay-search-input-form */
