@@ -104,6 +104,26 @@
 .ml-100 {margin-left: 100px}
 .m100 {margin: 100px}
 
+.mt_7 {margin-top: -7px}
+.mr_7 {margin-right: -7px}
+.mb_7 {margin-bottom: -7px}
+.ml_7 {margin-left: -7px}
+
+.mt_10 {margin-top: -10px}
+.mr_10 {margin-right: -10px}
+.mb_10 {margin-bottom: -10px}
+.ml_10 {margin-left: -10px}
+
+.mt_12 {margin-top: -12px}
+.mr_12 {margin-right: -12px}
+.mb_12 {margin-bottom: -12px}
+.ml_12 {margin-left: -12px}
+
+.mt_15 {margin-top: -15px}
+.mr_15 {margin-right: -15px}
+.mb_15 {margin-bottom: -15px}
+.ml_15 {margin-left: -15px}
+
 /* padding */
 .pt-7 {padding-top: 7px}
 .pr-7 {padding-right: 7px}
@@ -147,6 +167,8 @@
 .pl-100 {padding-left: 100px}
 .p100 {padding: 100px}
 
+.c-white {color: var(--white);}
 .c-red {color: var(--color-red)}
 .c-blue {color: var(--color-navyblue)}
+.c-default {background-color: var(--color-navyblue)}
 /******* end *******/

@@ -19,7 +19,8 @@
 	--color-white: #FEFCFB;
 	--color-red: #EF233C; /* #FF0054 */ /* #EF233C */ /* #D90429 */ /* #D00000 */
 	--color-silver: #E6E6E6;
-    --color-dimgray: #f4f4f4; /* #E5E5E5 */
+  --color-dimgray: #f4f4f4; /* #E5E5E5 */
+  --gold: #ffd700;
 
 	--bg-header: var(--color-navyblue);
 	--bg-header-right: var(--color-white);

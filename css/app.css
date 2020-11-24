@@ -356,7 +356,7 @@
 }
 
 .default-link:hover .link-desc {
-	color: var(--color-navyblue);
+	color: var(--primary);
 	text-decoration: underline;
 }
 
@@ -671,11 +671,54 @@
 
 .article-connected .content-aside {
   display: block;
-  padding: 15px 7px;
+  /*padding: 15px 7px;*/
+}
+
+.article-connected .content-aside .title {
+	margin-top: 0;
+	margin-bottom: 0;
+	text-align: center;
+	padding: 15px 7px;
+	text-transform: uppercase;
+	font-size: 24px;
+	font-size: 2.4rem;
+	font-family: 'Playfair Display', serif;
+	font-weight: 700;
+	color: var(--white);
+}
+
+@media only screen and (min-width: 992px) {
+	.article-connected .content-aside .title {
+		margin-bottom: 15px;
+		font-size: 24px;
+		font-size: 2.4rem;	
+		text-align: left;	
+		margin-right: 7px;
+	}
 }
 
 .article-connected .content-central {
   padding: 15px 7.5px;
+}
+
+.article-list {
+	list-style-type: none;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	padding: 0;
+}
+@media only screen and (min-width: 992px) {
+	.article-list {
+		margin-top: 0;
+	}
+}
+
+.article-list .btn {
+	padding-right: 7px;
+	padding-left: 7px;
+	border: 0;
+	font-size: 16px;
+	font-size: 1.6rem;
 }
 
 .article .content-central {
@@ -691,7 +734,7 @@
     margin-right: 20px;
   }
   .article-connected .content-aside {
-    width: 155px;
+    width: 160px;
     margin-right: 0;
   }
   /* central */
@@ -833,7 +876,6 @@
   -webkit-box-orient: vertical;
   overflow: hidden;   
   line-height: 1.316; 
-  color: var(--color-light);
 }
 
 .content-aside .thumb .thumb-content p {
@@ -845,6 +887,10 @@
   -webkit-box-orient: vertical;
   overflow: hidden;   
   color: var(--color-dark);
+}
+
+.content-aside .thumb-link:hover .thumb-content p {
+	color: var(--primary);
 }
 
 .content-aside .thumb .thumb-content {
@@ -937,6 +983,9 @@
 .color-card-video {
   background-color: #e87d88;
 }
+.c-card-video {
+	color: var(--red);
+}
 /* end */
 /* sport */
 .color-sport {
@@ -944,6 +993,9 @@
 }
 .color-card-sport {
   background-color: #65e7c0;
+}
+.c-card-sport {
+	color: var(--teal);
 }
 /* end */
 /* biznis */
@@ -953,6 +1005,9 @@
 .color-card-business {
   background-color: #66b0ff;
 }
+.c-card-business {
+	color: var(--blue);
+}
 /* end */
 /* kupovina */
 .color-shopping {
@@ -961,6 +1016,9 @@
 .color-card-shopping {
   background-color: #fdab68;
 }
+.c-card-shopping {
+	color: var(--orange);
+}
 /* end */
 /* kultura */
 .color-culture {
@@ -968,6 +1026,9 @@
 }
 .color-card-culture {
   background-color: #ffe866;
+}
+.c-card-culture {
+	color: var(--gold);
 }
 /* end */
 
@@ -981,4 +1042,81 @@
   background-color: var(--white);
 }
 .color-card-white {
+}
+
+.static-area .thumb .thumb-link {
+    flex-direction: row;
+    align-items: center;	
+}
+
+.static-area .thumb .thumb-image {
+	width: 100px;
+	height: 100px;
+}
+
+.static-area .thumb .thumb-content {
+	width: calc(100% - 100px);
+}
+
+.static-area .thumb .thumb-content p {
+    font-size: 15px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    color: var(--color-dark);    
+}
+
+.static-area .thumb-link:hover .thumb-content p {
+	color: var(--primary);
+}
+
+.gl__footer {
+	font-family: "Roboto Condensed", sans-serif;
+}
+
+.gl__footer .footer-bottom {
+	position: relative;
+	padding: 30px 0;
+	text-align: center;
+	border-top: 7px solid var(--color-navyblue);
+	background-color: var(--white);
+}
+
+.gl__footer .footer-bottom .btn {
+	font-size: 16px;
+	font-size: 1.6rem;
+	font-weight: 500;
+	text-transform: uppercase;
+	font-family: "Roboto Condensed", sans-serif;
+	padding-top: 0;
+	padding-bottom: 0;
+	border: 0;
+	line-height: 25px;
+	vertical-align: top;
+}
+
+.gl__footer .copyright {
+	font-family: "Roboto Condensed", sans-serif;
+	font-weight: 400;
+}
+
+.gl__footer .footer-bottom h2,
+.gl__footer .footer-bottom p {
+	margin-bottom: 20px;
+	color: var(--gray);
+}
+.gl__footer .footer-bottom p:last-child {
+	margin-bottom: 0;
+}
+
+.gl__footer .separator {
+    display: inline-block;
+    position: relative;
+    width: 1px;
+    height: 100%;
+    background-color: black;
+    color: transparent;	
 }
