@@ -78,4 +78,9 @@ $(function() {
     }, 3500);
 	*/
 
+
+	$(window).on('load', function () {
+		$(".preloader").delay(200).fadeOut(600).removeClass('loading').addClass('loaded');
+		$("body").css("overflow-y", "auto");
+	});
 });

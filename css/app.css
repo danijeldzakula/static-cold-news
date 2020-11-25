@@ -1,6 +1,116 @@
 @charset "UTF-8";
 
+/*
+body.loading {
+	overflow-y: hidden !important;
+}
 
+body.loaded {
+	overflow-y: auto;
+}
+*/
+.linear-activity {
+    overflow: hidden;
+    width: 100%;
+    max-width: 280px;
+    height: 4px;
+    background-color: #e1e1e1;
+    margin: 20px auto;
+}
+
+.indeterminate {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.indeterminate:before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    background-color: #292929;
+    animation: indeterminate_first 1.5s infinite ease-out;
+}
+
+.indeterminate:after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    background-color: #444444;
+    animation: indeterminate_second 1.5s infinite ease-in;
+}
+
+@keyframes indeterminate_first {
+    0% {
+        left: -100%;
+        width: 100%;
+    }
+    100% {
+        left: 100%;
+        width: 10%;
+    }
+}
+
+@keyframes indeterminate_second {
+    0% {
+        left: -150%;
+        width: 100%;
+    }
+    100% {
+        left: 100%;
+        width: 10%;
+    }
+}
+
+body .preloader,
+body.loading .preloader {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 100001;
+	pointer-events: auto;
+	display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: #fff;	
+
+}
+/*
+body.loaded .preloader {
+	background-color: transparent;
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+}
+*/
+
+.loader-logo-icon {
+	position: relative;
+	bottom: 100px;
+	width: 38px;
+	height: 38px;
+	margin-right: 10px;
+}
+
+.loader-text img {
+	position: relative;
+	bottom: 100px;
+	display: block;
+	width: 100%;
+	max-width: 220px;
+	margin-bottom: 7px;
+}
+
+.loader-indicator {
+	position: absolute;
+	bottom: 40px;
+	right: 0;
+	left: 0;
+}
 
 /* figure-carousel */
 .gl__figure {

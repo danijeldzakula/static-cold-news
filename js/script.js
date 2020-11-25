@@ -1,8 +1,8 @@
 (function(body) {
 	document.addEventListener('DOMContentLoaded', function(e) {
 		/* preloader */
-	    body.classList.remove('loading');
-	    body.classList.add('loaded');
+	    //body.classList.remove('loading');
+	    //body.classList.add('loaded');
 	    /* end */
 
 
