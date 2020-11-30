@@ -169,6 +169,7 @@
 
 .c-white {color: var(--white);}
 .c-red {color: var(--color-red)}
+.c-light-red {color: var(--color-light-red)}
 .c-blue {color: var(--color-navyblue)}
 .c-default {background-color: var(--color-navyblue)}
 /******* end *******/
