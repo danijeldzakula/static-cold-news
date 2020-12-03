@@ -63,18 +63,21 @@ $(function() {
 	});
 	/* end */
 	
+
+	
 	/*
-	$(window).on('load', function(e) { // makes sure the whole site is loaded
-	  	$('#status').fadeOut(); // will first fade out the loading animation
-	  	$('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
-	  	$('#overlay').fadeOut(); // removed absolute overlay after load page 
-	  	$('body').delay(400).removeClass('loading').addClass('loaded');
+	$(window).scroll(function() {
+	  	if ($(window).scrollTop() > 300) {
+	    	btn.addClass('show');
+	  	} else {
+	    	btn.removeClass('show');
+	  	}
 	});
 	*/
 
-	/*
-    setTimeout(function() {
-        $('body').addClass('loaded');
-    }, 3500);
-	*/
+	$('.back-top').on('click', function(e) {
+	  e.preventDefault();
+	  $('html, body').animate({scrollTop:0}, '300');
+	});
+
 });
